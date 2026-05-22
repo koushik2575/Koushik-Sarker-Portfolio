@@ -1,0 +1,31 @@
+{
+  "entities": {
+    "Project": {
+      "title": "Project",
+      "description": "A portfolio project",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "client": { "type": "string" },
+        "url": { "type": "string" },
+        "images": { "type": "array" }
+      }
+    },
+    "Content": {
+      "title": "Content",
+      "description": "General text content for the site",
+      "type": "object",
+      "properties": {}
+    }
+  },
+  "firestore": {
+    "projects": {
+      "schema": { "$ref": "#/entities/Project" },
+      "description": "Projects list"
+    },
+    "content": {
+      "schema": { "$ref": "#/entities/Content" },
+      "description": "General content"
+    }
+  }
+}
